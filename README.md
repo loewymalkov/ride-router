@@ -12,6 +12,17 @@ A map app that lets users share and rate fun riding/driving routes.
 
 ## SPECS
 
+- Register/Log-in Page
+- About this app page
+- Browse routes page, gives results for specific search paramaters and shows ratings
+- On Browse page can select an individual route which brings user to a map with directions from Google Maps
+- On a routes details, it can be reviewed or rated
+
+| | | | 
+|-|-|-|
+| | | |
+| | | |
+
 ## TECHNOLOGIES
 
 JavaScript, React, Materialize, CSS, VS Code, Google Maps API
