@@ -4,10 +4,9 @@
 
 A map app that lets users share and rate fun riding/driving routes. 
 
-
 ## SET-UP
 
-1. navigate to desired directory and enter 'git clone ...' in command line
+1. navigate to desired directory and enter 'git clone https://github.com/loewymalkov/ride-router.git' in command line
 2. enter 'cd ride-router' in command line
 3. ente 'npm i', then 'npm run start' in command line
 
@@ -15,7 +14,7 @@ A map app that lets users share and rate fun riding/driving routes.
 
 ## TECHNOLOGIES
 
-JavaScript, React, Materialize, CSS, VS Code
+JavaScript, React, Materialize, CSS, VS Code, Google Maps API
 
 ## AUTHOR
 
