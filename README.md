@@ -16,11 +16,12 @@ A map app that lets users share and rate fun riding/driving routes.
 - About this app page
 - Browse routes page, gives results for specific search paramaters and shows ratings
 - On Browse page can select an individual route which brings user to a map with directions from Google Maps
-- On a routes details, it can be reviewed or rated
+- On a routes details, it can be reviewed or rated and previous reviews edited
+- information is stored in a database
 
-| | | | 
+| Behavior | Input | Output | 
 |-|-|-|
-| | | |
+| user can register for a new account | 'Email, Password' | _on click will regsiter user with email and password |
 | | | |
 
 ## TECHNOLOGIES
