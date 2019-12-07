@@ -80,7 +80,7 @@ module.exports = {
      new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'BLUit Forum',
+      title: 'Ride Router',
       filename: resolve(__dirname, "build", "index.html"),
     }),
    ]

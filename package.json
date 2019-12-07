@@ -1,5 +1,5 @@
 {
-  "name": "bluit",
+  "name": "ride-router",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "lint-fix": "eslint src/** src/**/** --fix; exit 0"
   },
   "keywords": [],
-  "author": "",
+  "author": "loewy malkovich",
   "license": "ISC",
   "dependencies": {
     "css-loader": "^3.2.0",
