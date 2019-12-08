@@ -5,7 +5,7 @@ function Header(){
   return (
     <div>
       <h1>Ride Router</h1>
-      <Link to="/">Login</Link> | <Link to="/newpost">Create a New Route</Link>| <Link to="/routes">Browse Routes</Link>
+      <Link to="/">Login</Link> | <Link to="/newroute">Create a New Route</Link>| <Link to="/routes">Browse Routes</Link> | <Link to="/user">Account</Link>
     </div>
   );
 }

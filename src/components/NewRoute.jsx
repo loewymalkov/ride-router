@@ -4,10 +4,11 @@ import { v4 } from 'uuid';
 
 function NewRoute(props) {
   let _routeInfo = null;
+  let _rating = 0;
 
   function handleRouteSubmission(event) {
     event.preventDefault();
-    props.onNewRouteCreation({routeInfo: _routeInfo, id: v4()});
+    props.onNewRouteCreation({routeInfo: _routeInfo, rating: _rating, id: v4()});
     _routeInfo.value = '';
   }
 
@@ -15,10 +16,10 @@ function NewRoute(props) {
     <div>
       <h1>Upload a new route</h1>
       <form onSubmit={handleRouteSubmission}>
-      <textarea
-        id='routeInfo'
-        placeholder='Upload your map'
-        ref={(textarea) => { _routeInfo = textarea; }} />
+        <textarea
+          id='routeInfo'
+          placeholder='Upload your map'
+          ref={(textarea) => { _routeInfo = textarea; }} />
         <button type='submit'>Upload</button>
       </form>
     </div>
