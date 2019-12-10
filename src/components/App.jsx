@@ -14,11 +14,18 @@ class App extends React.Component {
       masterRouteList: []
     };
     this.handleRouteSubmission = this.handleRouteSubmission.bind(this);
+    this.handleRatingClick = this.handleRatingClick.bind(this);
   }
 
   handleRouteSubmission(newRoute) {
     var newMasterRouteList = this.state.masterRouteList.slice();
     newMasterRouteList.push(newRoute);
+    this.setState({ masterRouteList: newMasterRouteList });
+  }
+
+  handleRatingClick(index) {
+    var newMasterRouteList = this.state.masterRouteList.slice();
+    newMasterRouteList[index].rating ++;
     this.setState({ masterRouteList: newMasterRouteList });
   }
 
@@ -28,7 +35,7 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path="/" component={Login} />
-          <Route exact path="/routes" render={() => <RouteList routeList={this.state.masterRouteList} /> }/>
+          <Route exact path="/routes" render={() => <RouteList routeList={this.state.masterRouteList} rate={this.handleRatingClick} /> }/>
           <Route exact path="/newroute" render={() => <NewRoute onNewRouteCreation={this.handleRouteSubmission} /> }/>
           <Route exact path="/user" component={User} />
         </Switch>

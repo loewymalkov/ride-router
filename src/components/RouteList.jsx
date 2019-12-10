@@ -22,7 +22,8 @@ function RouteList(props) {
 RouteList.propTypes = {
   routeList: PropTypes.array,
   rate: PropTypes.func,
-  rating: PropTypes.number
+  rating: PropTypes.number,
+  index: PropTypes.number
 };
 
 export default RouteList;
