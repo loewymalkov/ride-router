@@ -1,6 +1,8 @@
 import StarRatings from './react-star-ratings';
 import PropTypes from 'prop-types';
 
+// need to lift state to work on App component - needs to grab the rating, round to nearest half digit, and render as stars. 
+
 class Foo extends Component {
   changeRating( newRating, index ) {
     this.setState({
