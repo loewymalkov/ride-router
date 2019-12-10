@@ -14,7 +14,7 @@ function Route(props) {
         <div className="card blue-grey darken-1">
           <div className="card-content white-text">
             <span className="card-title">{props.routeInfo}</span>
-            <p><button onClick = {handleRatingClick} className='material-icons'>star</button>  | <span >5</span></p>
+            <p><button onClick = {handleRatingClick} className='material-icons'>star</button>  | {props.rating}</p>
           </div>
         </div>
       </div>
