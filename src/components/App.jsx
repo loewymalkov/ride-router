@@ -32,7 +32,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{background: ''}}>
         <Header/>
         <Switch>
           <Route exact path="/" component={Login} />
