@@ -13,21 +13,29 @@ function LogIn(props){
     _password.value = '';
   }
   return (
-    <div>
-      <h1>Sign in to your profile</h1>
-      <form onSubmit={handleLogIn}>
-        <input
-          type='text'
-          id='username'
-          placeholder='username or email'
-          ref={(input) => { _username = input; }} />
-        <input
-          type='text'
-          id='password'
-          placeholder='password'
-          ref={(input) => { _password = input; }} />
-        <button type='submit'>Log In</button>
-      </form>
+    <div style={{marginTop: 50, marginLeft: 40}} className="row">
+      <div className="col s12 m7">
+        <div className="card">
+          <div className="card-content">
+            <form onSubmit={handleLogIn}>
+              <input
+                type='text'
+                id='username'
+                placeholder='username or email'
+                ref={(input) => { _username = input; }} />
+              <input
+                type='text'
+                id='password'
+                placeholder='password'
+                ref={(input) => { _password = input; }} />
+              <button type='submit'>Log In</button>
+            </form>
+          </div>
+          <div className="card-action">
+            <a href="#/routes">browse maps</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

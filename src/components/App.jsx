@@ -6,6 +6,7 @@ import Header from './Header';
 import User from './User';
 import { Switch, Route } from 'react-router-dom';
 
+
 class App extends React.Component {
   
   constructor(props) {
@@ -27,12 +28,16 @@ class App extends React.Component {
     var newMasterRouteList = this.state.masterRouteList.slice();
     newMasterRouteList[index].rating ++;
     this.setState({ masterRouteList: newMasterRouteList });
-    console.log(newMasterRouteList[index], 'index');
   }
 
   render() {
     return (
-      <div style={{background: ''}}>
+      <div>
+        <style global jsx>{`
+        body {
+          background-color: #EAF2F8
+        }
+      `}</style>
         <Header/>
         <Switch>
           <Route exact path="/" component={Login} />
