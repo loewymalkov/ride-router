@@ -3,7 +3,7 @@ import Route from './Route';
 import PropTypes from 'prop-types';
 
 function RouteList(props) {
-  // props.routeList.sort((a, b) => b.rating - a.rating);
+  props.routeList.sort((a, b) => b.rating - a.rating);
   return (
     <div>
       <hr/>

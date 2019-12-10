@@ -21,8 +21,12 @@ A map app that lets users share and rate fun riding/driving routes.
 
 | Behavior | Input | Output | 
 |-|-|-|
-| user can register for a new account | 'Email, Password' | _on click will regsiter user with email and password |
-| | | |
+| user can register for a new account | 'Email, Password - Register' | _on click will regsiter user with email and password |
+| user can log in when account is created | 'Email, Password - Log In '| _log's in user, redirects to browse routes_ |
+| user can upload a new route from google maps | 'Upload link' | _uploads users map, adds it to routes list_ |
+| user can rate and add a review for a route | 'Portland to Salem - 2h14m, 4.5 stars, 3 reviews' | _provides user with list of routes and the option to read the reviews/see the details_ |
+| user can view details for a route | 'View Details' | _gives google maps based directions + reivews, rating_ |
+| user can delete the routes hes uploaded | 'Delete' | _will remove the route from the database_ |
 
 ## TECHNOLOGIES
 
