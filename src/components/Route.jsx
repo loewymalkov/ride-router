@@ -5,13 +5,13 @@ import 'materialize-css/dist/css/materialize.min.css';
 function Route(props) {
 
   function handleRatingClick() {
-    props.rate(props.index);
+    props.onRate(props.index);
   }
 
   return (
     <div className="row">
       <div className="col s12 m6">
-        <div className="card blue-grey darken-1">
+        <div className="card" style={{backgroundColor: '#FFCA28'}}>
           <div className="card-content white-text">
             <span className="card-title">{props.routeInfo}</span>
             <p><button onClick = {handleRatingClick} className='material-icons'>star</button>  | {props.rating}</p>
@@ -26,7 +26,7 @@ function Route(props) {
 Route.propTypes = {
   routeInfo: PropTypes.string,
   rating: PropTypes.number,
-  rate: PropTypes.func,
+  onRate: PropTypes.func,
   index: PropTypes.number
 };
 

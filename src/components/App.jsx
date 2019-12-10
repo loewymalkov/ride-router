@@ -27,6 +27,7 @@ class App extends React.Component {
     var newMasterRouteList = this.state.masterRouteList.slice();
     newMasterRouteList[index].rating ++;
     this.setState({ masterRouteList: newMasterRouteList });
+    console.log(newMasterRouteList[index], 'index');
   }
 
   render() {
@@ -35,7 +36,7 @@ class App extends React.Component {
         <Header/>
         <Switch>
           <Route exact path="/" component={Login} />
-          <Route exact path="/routes" render={() => <RouteList routeList={this.state.masterRouteList} rate={this.handleRatingClick} /> }/>
+          <Route exact path="/routes" render={() => <RouteList routeList={this.state.masterRouteList} onRate={this.handleRatingClick} /> }/>
           <Route exact path="/newroute" render={() => <NewRoute onNewRouteCreation={this.handleRouteSubmission} /> }/>
           <Route exact path="/user" component={User} />
         </Switch>

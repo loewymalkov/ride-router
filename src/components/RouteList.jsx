@@ -10,7 +10,7 @@ function RouteList(props) {
       {props.routeList.map((route, index) => 
         <Route
           routeInfo={route.routeInfo}
-          rate={props.rate}
+          onRate={props.onRate}
           rating={props.rating}
           index={index}
           key={route.id}/>
@@ -21,7 +21,7 @@ function RouteList(props) {
 
 RouteList.propTypes = {
   routeList: PropTypes.array,
-  rate: PropTypes.func,
+  onRate: PropTypes.func,
   rating: PropTypes.number,
   index: PropTypes.number
 };
