@@ -28,6 +28,22 @@ A map app that lets users share and rate fun riding/driving routes.
 | user can view details for a route | 'View Details' | _gives google maps based directions + reivews, rating_ |
 | user can delete the routes hes uploaded | 'Delete' | _will remove the route from the database_ |
 
+## DATABASE
+
+Ride Router stores user account, map and rating/review information via FireBase. Here is an example of the database structure:
+
+- User:
+  - username: aRider
+  - password: ******
+  - Route:
+    - Google Map Direction: https://maps.google.com...
+    - Time: 2h14m
+    - Rating: ****
+    - Reviews: 
+      - "awesome route"
+      - "had a hard time with my current bike but overall fun"
+
+
 ## TECHNOLOGIES
 
 JavaScript, React, Materialize, CSS, VS Code, Google Maps API
