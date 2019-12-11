@@ -9,7 +9,7 @@ function NewRoute(props) {
 
   function handleRouteSubmission(event) {
     event.preventDefault();
-    props.onNewRouteCreation({routeInfo: _routeInfo.value, rating: _rating, id: v4()});
+    props.onNewRouteCreation({routeInfo: _routeInfo.value, rating: _rating.value, id: v4()});
     _routeInfo.value = '';
   }
 

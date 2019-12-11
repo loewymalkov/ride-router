@@ -9,7 +9,7 @@ function LogIn(props){
 
   function handleLogIn(event) {
     event.preventDefault();
-    props.onLogIn({username: _username, password: _password, id: v4() });
+    props.onLogIn({username: _username.value, password: _password.value, id: v4() });
     _password.value = '';
   }
   return (
