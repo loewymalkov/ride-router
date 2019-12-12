@@ -28,6 +28,12 @@ A map app that lets users share and rate fun riding/driving routes.
 | user can view details for a route | 'View Details' | _gives google maps based directions + reivews, rating_ |
 | user can delete the routes hes uploaded | 'Delete' | _will remove the route from the database_ |
 
+## ROUTE DIAGRAM
+
+<img src="src/images/ride-router-diagram.jpeg"
+     alt="Web App Diagram"
+     style="margin-left: 10px;" />
+
 ## DATABASE
 
 Ride Router stores user account, map and rating/review information via FireBase. Here is an example of the database structure:
