@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 
+// create a copy of the header links for logged in and logged out conditions
 
 function LogIn(props){
   let _username = null;

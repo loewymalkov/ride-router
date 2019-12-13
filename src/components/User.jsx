@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
+// will need to be completely refactored into seperate folder
 
 function User(props) {
   return(

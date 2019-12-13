@@ -13,6 +13,7 @@ function Header(){
             <li><a href='#/newroute'><i className="material-icons" style={{marginRight: 15}}>add_circle_outline</i></a></li>
             <li><a href='#/routes'><i className="material-icons" style={{marginRight: 15}}>search</i></a></li>
             <li><a href='#/user'><i className="material-icons" style={{marginRight: 15}}>account_circle</i></a></li>
+            <li><a href='#/logout'><i className="btn btn-floating" style={{marginRight: 15}}>Loug Out</i></a></li>
           </ul> 
         </div>
       </nav>
