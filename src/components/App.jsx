@@ -1,9 +1,9 @@
 import React from 'react';
-import RouteList from './RouteList';
-import NewRoute from './NewRoute';
-import Login from './Login';
-import Header from './Header';
-import User from './User';
+import RouteList from './routes/RouteList';
+import NewRoute from './routes/NewRoute';
+import Login from './auth/Login';
+import Header from './layout/Header';
+import User from './auth/User';
 import { Switch, Route } from 'react-router-dom';
 
 
