@@ -1,8 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
-
-// create a copy of the header links for logged in and logged out conditions
 
 class Register extends Component {
   state = {
@@ -25,44 +21,50 @@ class Register extends Component {
     console.log(this.state);
   }
   
-  let _username = null;
-  let _password = null;
-
-  function handleLogIn(event) {
-    event.preventDefault();
-    props.onLogIn({username: _username.value, password: _password.value, id: v4() });
-    _password.value = '';
-  }
-  return (
-    <div style={{marginTop: 50, marginLeft: 40}} className="row">
-      <div className="col s12 m7">
-        <div className="card">
-          <div className="card-content">
-            <form onSubmit={handleLogIn}>
-              <input
-                type='text'
-                id='username'
-                placeholder='username or email'
-                ref={(input) => { _username = input; }} />
-              <input
-                type='text'
-                id='password'
-                placeholder='password'
-                ref={(input) => { _password = input; }} />
-              <button type='submit'>Log In</button>
-            </form>
-          </div>
-          <div className="card-action">
-            <a href="#/routes">browse maps</a>
+  render() {
+    
+    return (
+      <div style={{marginTop: 50, marginLeft: 40}} className="row">
+        <div className="col s12 m7">
+          <div className="card">
+            <div className="card-content">
+              <form onSubmit={this.handleSubmit}>
+                <input
+                  type='email'
+                  id='username'
+                  placeholder='username or email'
+                  onChange={this.handleChange} />
+                <input
+                  type='password'
+                  id='password'
+                  placeholder='password'
+                  onChange={this.handleChange} />
+                  <input
+                  type='text'
+                  id='firstName'
+                  placeholder='First Name'
+                  onChange={this.handleChange} />
+                  <input
+                  type='text'
+                  id='lastName'
+                  placeholder='Last Name'
+                  onChange={this.handleChange} />
+                  <input
+                  type='text'
+                  id='motorcycleType'
+                  placeholder='What type of motorcycle do you ride?'
+                  onChange={this.handleChange} />
+                <button type='submit'>Log In</button>
+              </form>
+            </div>
+            <div className="card-action">
+              <a href="#/routes">browse maps</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-LogIn.propTypes = {
-  onLogIn: PropTypes.func
-};
-
-export default LogIn;
+export default Register;
