@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class LogIn extends Component {
+class Register extends Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    firstName: '',
+    lastName: '',
+    motorcycleType: ''
   }
   
   handleChange = (event) => {
@@ -17,7 +20,7 @@ class LogIn extends Component {
     event.preventDefault();
     console.log(this.state);
   }
-  
+
   render() {
     
     return (
@@ -36,7 +39,22 @@ class LogIn extends Component {
                   id='password'
                   placeholder='password'
                   onChange={this.handleChange} />
-                <button type='submit'>Log In</button>
+                  <input
+                  type='text'
+                  id='firstName'
+                  placeholder='First Name'
+                  onChange={this.handleChange} />
+                  <input
+                  type='text'
+                  id='lastName'
+                  placeholder='Last Name'
+                  onChange={this.handleChange} />
+                  <input
+                  type='text'
+                  id='motorcycleType'
+                  placeholder='What type of motorcycle do you ride?'
+                  onChange={this.handleChange} />
+                <button type='submit'>Register</button>
               </form>
             </div>
             <div className="card-action">
@@ -49,4 +67,4 @@ class LogIn extends Component {
   }
 }
 
-export default LogIn;
+export default Register;

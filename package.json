@@ -20,8 +20,12 @@
     "prop-types": "^15.5.10",
     "react": "^16.12",
     "react-dom": "^16.12",
+    "react-redux-firebase": "^3.0.5",
     "react-router-dom": "^4.0.0",
     "react-star-ratings": "^2.3.0",
+    "redux": "^4.0.4",
+    "redux-firestore": "^0.11.0",
+    "redux-thunk": "^2.3.0",
     "style-loader": "^1.0.0",
     "styled-jsx": "^3.2.4"
   },

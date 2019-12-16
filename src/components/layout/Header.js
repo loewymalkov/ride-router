@@ -4,7 +4,7 @@ import LoggedOutLinks from './LoggedOutLinks';
 import 'materialize-css/dist/css/materialize.min.css';
 
 
-function Header(){
+const Header = () => {
   return (
     <div className="navbar-fixed">
       <nav>
@@ -12,8 +12,7 @@ function Header(){
         <LoggedOutLinks />
       </nav>
     </div>
-
   );
-}
+};
 
 export default Header;
