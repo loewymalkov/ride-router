@@ -20,7 +20,7 @@ class Register extends Component {
     event.preventDefault();
     console.log(this.state);
   }
-  
+
   render() {
     
     return (
@@ -54,7 +54,7 @@ class Register extends Component {
                   id='motorcycleType'
                   placeholder='What type of motorcycle do you ride?'
                   onChange={this.handleChange} />
-                <button type='submit'>Log In</button>
+                <button type='submit'>Register</button>
               </form>
             </div>
             <div className="card-action">
