@@ -9,7 +9,7 @@ const Route = ({route}) => {
           <div className="card-content white-text">
             <p><span className="card-title">{route.title}</span></p>
             <p>{route.routeInfo}</p>
-            <p><button className='material-icons'>star</button>  | {route.rating}</p>
+            <p><button className='material-icons'>star</button>  | rating </p>
           </div>
         </div>
       </div>

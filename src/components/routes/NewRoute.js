@@ -6,9 +6,8 @@ import 'materialize-css/dist/css/materialize.min.css';
 
 class NewRoute extends Component {
   state = {
-    title = '',
-    routeInfo = '',
-    rating = ''
+    title:'',
+    routeInfo:''
   }
 
   handleChange(event) {
