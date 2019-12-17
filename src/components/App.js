@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import RouteList from './components/routes/RouteList';
 import NewRoute from './components/routes/NewRoute';
 import Home from './components/home/Home';
 import Header from './components/layout/Header';
 import User from './components/auth/User';
+import LogIn from './components/auth/LogIn';
+import Register from './components/auth/Register';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
@@ -17,11 +19,13 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/routes/:id" component={RouteList} />
             <Route path="/newroute" component={NewRoute} />
+            <Route path='/signin' component={LogIn} />
+            <Route path='/signup' component={Register} />
             <Route path="/user" component={User} />
           </Switch>
         </div>
       </BrowserRouter>
-    )
+    );
   }
 }
 

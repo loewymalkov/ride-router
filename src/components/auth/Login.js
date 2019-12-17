@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { signIn } from '../../store/actions/authActions';
+import { Redirect } from 'react-router-dom';
 
-class Login extends Component {
+class LogIn extends Component {
     state = {
       email: '',
       password: ''
@@ -15,10 +18,12 @@ class Login extends Component {
   
     handleSubmit = (event) => {
       event.preventDefault();
-      console.log(this.state);
+      this.props.signIn(this.state);
     }
   
   render() {
+    const { authError, auth } = this.props;
+    if (auth.uid) return <Redirect to='/' />
     return (
       <div style={{marginTop: 50, marginLeft: 40}} className="row">
         <div className="col s12 m7">
@@ -41,6 +46,9 @@ class Login extends Component {
             <div className="card-action">
               <a href="#/routes">browse maps</a>
             </div>
+            <div className="red-text center">
+              { authError ? <p>{authError}</p> : null }
+            </div>
           </div>
         </div>
       </div>
@@ -48,4 +56,17 @@ class Login extends Component {
   }
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+  return {
+    authError: state.auth.authError,
+    auth: state.firebase.auth
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signIn: (creds) => dispatch(signIn(creds))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LogIn);

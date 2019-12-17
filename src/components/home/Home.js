@@ -4,11 +4,12 @@ import Rating from '../routes/Rating';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import { Redirect } from 'react-router-dom';
 
 class Home extends Component {
   render() {
-    const { routes } = this.props;
-    
+    const { routes, auth } = this.props;
+    if (!auth.uid) return <Redirect to='/signin' />;
     return (
       <div className="dashboard container">
         <div className="row">
@@ -20,20 +21,21 @@ class Home extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state) => {
   console.log(state);
   return {
-    projects: state.firestore.ordered.routes || state.project.routes
-  }
-}
+    routes: state.firestore.ordered.routes,
+    auth: state.firebase.auth
+  };
+};
 
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
     { collection: 'routes' }
   ])
-)(Home)
+)(Home);

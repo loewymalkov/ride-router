@@ -2,11 +2,11 @@ const initState = {};
 
 const routeReducer = (state = initState, action) => {
   switch (action.type) {
-  case 'CREATE_ROUTE_SUCCESS':
-    console.log('create project success');
+  case 'UPLOAD_ROUTE_SUCCESS':
+    console.log('upload route success');
     return state;
-  case 'CREATE_ROUTE_ERROR':
-    console.log('create project error');
+  case 'UPLOAD_ROUTE_ERROR':
+    console.log('uplad route error');
     return state;
   default:
     return state;

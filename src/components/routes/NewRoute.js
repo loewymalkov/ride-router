@@ -1,46 +1,68 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { newRoute } from '../../store/actions/routeActions';
+import { Redirect } from 'react-router-dom';
 import 'materialize-css/dist/css/materialize.min.css';
 
-function NewRoute(props) {
-  let _routeInfo = null;
-  let _rating = 0;
-
-  function handleRouteSubmission(event) {
-    event.preventDefault();
-    props.onNewRouteCreation({routeInfo: _routeInfo.value, rating: _rating.value, id: v4()});
-    _routeInfo.value = '';
+class NewRoute extends Component {
+  state = {
+    title = '',
+    routeInfo = '',
+    rating = ''
   }
 
-  return (
+  handleChange(event) {
+    this.setState({
+      [event.target.id]: event.target.value
+    })
+  }
 
-    <div style={{marginTop: 50, marginLeft: 40}} className="row">
-      <div className="col s12 m7">
-        <div className="card">
-          <div className="card-image">
-            <span className="card-title">UPLOAD A NEW ROUTE</span>
-          </div>
-          <div className="card-content">
-            <form onSubmit={handleRouteSubmission}>
-              <textarea
-                id='routeInfo'
-                placeholder='Upload your map'
-                ref={(textarea) => { _routeInfo = textarea; }} />
-              <button type='submit'>Upload</button>
-            </form>
-          </div>
-          <div className="card-action">
-            <a href="#/routes">browse maps</a>
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.newRoute(this.state);
+    this.props.history.push('/');
+  }
+
+  render() {
+    const { auth } = this.props;
+      if (!auth.uid) return <Redirect to='/signin' />
+    return (
+      <div style={{marginTop: 50, marginLeft: 40}} className="row">
+        <div className="col s12 m7">
+          <div className="card">
+            <div className="card-image">
+              <span className="card-title">Upload Map</span>
+            </div>
+            <div className="card-content">
+              <form onSubmit={this.handleSubmit}>
+                <input type="text" id='title' placeholder='Title' onChange={this.handleChange} /> 
+                <textarea
+                  id='routeInfo'
+                  placeholder='Upload your map'
+                  onChange={this.handleChange} />
+                <button type='submit'>upload</button>
+              </form>
+            </div>
+            <div className="card-action">
+              <a href="#/routes">browse maps</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
-NewRoute.propTypes = {
-  onNewRouteCreation: PropTypes.func
-};
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
 
-export default NewRoute;
+const mapDispatchToProps = dispatch => {
+  return {
+    newRoute: (route) => dispatch(newRoute(route))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewRoute);
