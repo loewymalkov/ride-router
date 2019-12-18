@@ -15,8 +15,8 @@ const RouteDetails = (props) => {
           <div className="card-content">
             <span className="card-title">{ route.title } </span>
             <embed src={ route.routeInfo } width="600" height="600" title="map"></embed>
-            <p>{route.authorFirstName} {route.authorLastName}</p>
-            <p> { Date() }</p>
+            <p>{route.userFirstName} {route.userLastName}</p>
+            <p> {route.createdAt.toDate().toString()}</p>
           </div>
         </div>
       </div>
