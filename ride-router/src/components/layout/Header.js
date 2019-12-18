@@ -12,7 +12,7 @@ const Header = (props) => {
     <div className="navbar-fixed" >
       <nav style={{backgroundColor: 'rgba(0, 230, 226, 0.51)'}}>
         <div className="container">
-          <Link to='/' className="brand-logo">
+          <Link to='/' className="brand-logo" style={{fontFamily: 'Cabin Sketch'}}>
             Ride Router
           </Link>
           { links }

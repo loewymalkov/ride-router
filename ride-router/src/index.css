@@ -12,6 +12,9 @@ body {
   min-height: 100%;
 }
 
+.ride-router {
+  font-family: 'Monoton', cursive;
+}
 
 form {
   padding: 20px;
