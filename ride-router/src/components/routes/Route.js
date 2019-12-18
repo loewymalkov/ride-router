@@ -8,7 +8,11 @@ const Route = ({route}) => {
           <div className="card-content white-text">
             <p><span className="card-title">{route.title}</span></p>
             <p>{route.routeInfo}</p>
-            <p><button className='material-icons'>star</button>  | rating </p>
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star checked"></span>
+            <span className="fa fa-star checked"></span>
           </div>
         </div>
       </div>
