@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
+import moment from 'moment';
 
 const RouteDetails = (props) => {
   const { route, auth } = props;
@@ -16,7 +17,7 @@ const RouteDetails = (props) => {
             <span className="card-title">{ route.title } </span>
             <embed src={ route.routeInfo } width="600" height="600" title="map"></embed>
             <p>{route.userFirstName} {route.userLastName}</p>
-            <p> {route.createdAt.toDate().toString()}</p>
+            <p> {moment(route.createdAt.toDate()).calendar()}</p>
           </div>
         </div>
       </div>
