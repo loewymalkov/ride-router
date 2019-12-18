@@ -111,22 +111,22 @@ class Register extends Component {
           <h5 className="grey-text text-darken-3">Register</h5>
           <div className="input-field">
             <i className="material-icons prefix">email</i>
-            <label htmlFor="email">Email</label>
+            <label className="grey-text text-darken-2" htmlFor="email">Email</label>
             <input type="email" id='email' onChange={this.handleChange} />
           </div>
           <div className="input-field">
             <i className="material-icons prefix">lock</i>
-            <label htmlFor="password">Password</label>
+            <label className="grey-text text-darken-2" htmlFor="password">Password</label>
             <input type="password" id='password' onChange={this.handleChange} />
           </div>
           <div className="input-field">
             <i className="material-icons prefix">account_circle</i>
-            <label htmlFor="firstName">First Name</label>
+            <label className="grey-text text-darken-2" htmlFor="firstName">First Name</label>
             <input type="text" id='firstName' onChange={this.handleChange} />
           </div>
           <div className="input-field">
             <i className="material-icons prefix">group</i>
-            <label htmlFor="lastName">Last Name</label>
+            <label className="grey-text text-darken-2" htmlFor="lastName">Last Name</label>
             <input type="text" id='lastName' onChange={this.handleChange} />
           </div>
           <div className="input-field">

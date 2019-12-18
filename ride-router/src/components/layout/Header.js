@@ -9,8 +9,8 @@ const Header = (props) => {
   const { auth, profile } = props;
   const links = auth.uid ? <LoggedInLinks profile={ profile } /> : <LoggedOutLinks />;
   return (
-    <div className="navbar-fixed ">
-      <nav>
+    <div className="navbar-fixed" >
+      <nav style={{backgroundColor: 'rgba(0, 230, 226, 0.51)'}}>
         <div className="container">
           <Link to='/' className="brand-logo">
             Ride Router

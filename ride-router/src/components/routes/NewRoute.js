@@ -28,14 +28,24 @@ class NewRoute extends Component {
     return (
      <div className="container">
       <form style={{ background: 'rgba(255, 255, 255, 0.6)'}}onSubmit={this.handleSubmit}>
-        <h5 className="grey-text text-darken-3" style={{marginBottom: 20}}>Upload a map</h5>
-        <label htmlFor="title">What do you want to name this map?</label>
-        <input type="text" id='title' onChange={this.handleChange} /> 
-        <label htmlFor="routeInfo">Add your google map url</label>
-        <textarea
-          id='routeInfo'
-          onChange={this.handleChange} />
+        <h5 >Upload a map</h5>
+        <div className="input-field">
+          <label className="grey-text text-darken-2" htmlFor="title">What do you want to name this map?</label>
+          <input 
+          type="text" 
+          id='title' 
+          onChange={this.handleChange} /> 
+        </div>
+        <div className="input-field">
+          <label className="grey-text text-darken-2" htmlFor="routeInfo">Add your google map url</label>
+          <input
+            type="text" 
+            id='routeInfo'
+            onChange={this.handleChange} />
+        </div>
+        <div className="input-field">
         <button type='submit' className="material-icons" style={{backgroundColor: '#26C6DA'}} >motorcycle</button>
+        </div>
       </form>
      </div>
     );

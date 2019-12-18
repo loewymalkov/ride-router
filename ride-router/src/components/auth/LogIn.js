@@ -26,12 +26,12 @@ class LogIn extends Component {
           <h5 className="grey-text text-darken-3">Log In</h5>
           <div className="input-field">
             <i className="material-icons prefix">email</i>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="grey-text text-darken-2">Email</label>
             <input type="email" id='email' onChange={this.handleChange} />
           </div>
           <div className="input-field">
             <i className="material-icons prefix">lock</i>
-            <label htmlFor="password">Password</label>
+            <label className="grey-text text-darken-2" htmlFor="password">Password</label>
             <input type="password" id='password' onChange={this.handleChange} />
           </div>
           <div className="input-field">

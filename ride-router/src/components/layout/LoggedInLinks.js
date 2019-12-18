@@ -5,8 +5,8 @@ import { signOut } from '../../store/actions/authActions';
 
 const LoggedInLinks = (props) => {
   return (
-    <div className="nav-wrapper" style={{backgroundColor: '#F4D03F'}}>
-      <ul id='nav-mobile' className="right hide-on-med-and-down" style={{backgroundColor: '#26C6DA'}}>
+    <div className="nav-wrapper" style={{backgroundColor: 'rgba(0, 230, 226, 0.51)'}}>
+      <ul id='nav-mobile' className="right hide-on-med-and-down">
         <li>
           <NavLink to='/newroute'><i className="material-icons" style={{marginRight: 15}}>add_circle_outline</i>
           </NavLink>
