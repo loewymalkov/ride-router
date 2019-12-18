@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { newRoute } from '../../store/actions/routeActions';
 import { Redirect } from 'react-router-dom';
-import 'materialize-css/dist/css/materialize.min.css';
 
 class NewRoute extends Component {
   state = {

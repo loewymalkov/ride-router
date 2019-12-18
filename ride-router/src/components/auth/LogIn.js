@@ -12,7 +12,7 @@ class LogIn extends Component {
     handleChange = (event) => {
       this.setState({
         [event.target.id]:
-        e.target.value
+        event.target.value
       })
     }
   

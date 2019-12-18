@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LoggedInLinks from './LoggedInLinks';
 import LoggedOutLinks from './LoggedOutLinks';
-import 'materialize-css/dist/css/materialize.min.css';
 import { connect } from 'react-redux';
  
 

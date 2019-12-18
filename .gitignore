@@ -3,3 +3,7 @@ node_modules
 build
 .vscode/
 src/constants/firebaseConfig.js
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

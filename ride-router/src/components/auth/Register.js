@@ -8,14 +8,13 @@ class Register extends Component {
     email: '',
     password: '',
     firstName: '',
-    lastName: '',
-    motorcycleType: ''
+    lastName: ''
   }
   
   handleChange = (event) => {
     this.setState({
       [event.target.id]:
-      e.target.value
+      event.target.value
     })
   }
 
@@ -52,11 +51,6 @@ class Register extends Component {
                   type='text'
                   id='lastName'
                   placeholder='Last Name'
-                  onChange={this.handleChange} />
-                  <input
-                  type='text'
-                  id='motorcycleType'
-                  placeholder='What type of motorcycle do you ride?'
                   onChange={this.handleChange} />
                 <button type='submit'>Register</button>
               </form>

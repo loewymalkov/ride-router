@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firestore';
 
-var firebaseConfig = {
+var config = {
   apiKey: 'AIzaSyDgMFl5tjFY8xdlWPBOM5SOnlqTlEYhCUQ',
   authDomain: 'ride-router.firebaseapp.com',
   databaseURL: 'https://ride-router.firebaseio.com',
@@ -13,8 +13,7 @@ var firebaseConfig = {
   measurementId: 'G-KVJ03KBCRR'
 };
 
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+firebase.initializeApp(config);
 firebase.firestore().settings({ timestampsInSnapshots: true });
 
 export default firebase;
