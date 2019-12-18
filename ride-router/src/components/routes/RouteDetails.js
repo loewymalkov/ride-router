@@ -11,14 +11,12 @@ const RouteDetails = (props) => {
   if (route) {
     return (
       <div className="container section route-details">
-        <div className="card z-depth-0">
+        <div className="card z-depth-0" style={{ background: 'rgba(255, 255, 255, 0.55)'}}>
           <div className="card-content">
             <span className="card-title">{ route.title } </span>
             <embed src={ route.routeInfo } width="600" height="600" title="map"></embed>
-          </div>
-          <div className="card-action grey lighten-4 grey-text">
-            <div>{route.authorFirstName} {route.authorLastName} </div>
-            <div> { Date() } </div>
+            <p>{route.authorFirstName} {route.authorLastName}</p>
+            <p> { Date() }</p>
           </div>
         </div>
       </div>

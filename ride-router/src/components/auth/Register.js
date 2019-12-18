@@ -107,26 +107,30 @@ class Register extends Component {
     if (auth.uid) return <Redirect to='/' />
     return (
       <div className="container">
-        <form className="white" onSubmit={this.handleSubmit}>
+        <form style={{ background: 'rgba(255, 255, 255, 0.6)'}} onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Register</h5>
           <div className="input-field">
+            <i className="material-icons prefix">email</i>
             <label htmlFor="email">Email</label>
             <input type="email" id='email' onChange={this.handleChange} />
           </div>
           <div className="input-field">
+            <i className="material-icons prefix">lock</i>
             <label htmlFor="password">Password</label>
             <input type="password" id='password' onChange={this.handleChange} />
           </div>
           <div className="input-field">
+            <i className="material-icons prefix">account_circle</i>
             <label htmlFor="firstName">First Name</label>
             <input type="text" id='firstName' onChange={this.handleChange} />
           </div>
           <div className="input-field">
+            <i className="material-icons prefix">group</i>
             <label htmlFor="lastName">Last Name</label>
             <input type="text" id='lastName' onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Sign Up</button>
+            <button className="btn lighten-1 z-depth-0">Sign Up</button>
             <div className="center red-text">
               { authError ? <p>{ authError }</p> : null }
             </div>

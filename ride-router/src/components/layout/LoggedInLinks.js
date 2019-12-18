@@ -7,10 +7,22 @@ const LoggedInLinks = (props) => {
   return (
     <div className="nav-wrapper" style={{backgroundColor: '#F4D03F'}}>
       <ul id='nav-mobile' className="right hide-on-med-and-down" style={{backgroundColor: '#26C6DA'}}>
-        <li><NavLink to='/newroute'><i className="material-icons" style={{marginRight: 15}}>add_circle_outline</i></NavLink></li>
-        <li><NavLink to='/'><i className="material-icons" style={{marginRight: 15}}>search</i></NavLink></li>
-        <li><NavLink to='/user'><i className="material-icons" style={{marginRight: 15}}>account_circle</i></NavLink></li>
-        <li><a onClick={props.signOut}><i style={{marginRight: 15}}>LOG OUT</i></a></li>
+        <li>
+          <NavLink to='/newroute'><i className="material-icons" style={{marginRight: 15}}>add_circle_outline</i>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/'><i className="material-icons" style={{marginRight: 15}}>search</i>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/user'><i className="material-icons" style={{marginRight: 15}}>account_circle</i>
+          </NavLink>
+        </li>
+        <li>
+          <a onClick={props.signOut}><i className="material-icons" style={{marginRight: 15}}>close</i>
+          </a>
+        </li>
       </ul>
     </div>
   );

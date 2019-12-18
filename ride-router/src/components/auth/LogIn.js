@@ -22,13 +22,15 @@ class LogIn extends Component {
     if (auth.uid) return <Redirect to='/' />
     return (
       <div className="container">
-        <form className="white" onSubmit={this.handleSubmit}>
+        <form style={{ background: 'rgba(255, 255, 255, 0.6)'}} onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Log In</h5>
           <div className="input-field">
+            <i className="material-icons prefix">email</i>
             <label htmlFor="email">Email</label>
             <input type="email" id='email' onChange={this.handleChange} />
           </div>
           <div className="input-field">
+            <i className="material-icons prefix">lock</i>
             <label htmlFor="password">Password</label>
             <input type="password" id='password' onChange={this.handleChange} />
           </div>

@@ -26,24 +26,18 @@ class NewRoute extends Component {
       if (!auth.uid) return <Redirect to='/signin' />
 
     return (
-      <div className="container" style={{margin: 100}}>
-        <div className="card trans-box">
-          <div className="card-image">
-            <span className="card-title trans-text">Upload Map</span>
-          </div>
-          <div className="card-content">
-            <form onSubmit={this.handleSubmit}>
-              <label htmlFor="title">What do you want to call this map?</label>
-              <input type="text" id='title' onChange={this.handleChange} /> 
-              <label htmlFor="routeInfo">Add your google map url</label>
-              <textarea
-                id='routeInfo'
-                onChange={this.handleChange} />
-              <button type='submit' className="material-icons" style={{backgroundColor: '#26C6DA'}} >motorcycle</button>
-            </form>
-          </div>
-        </div>
-      </div>
+     <div className="container">
+      <form style={{ background: 'rgba(255, 255, 255, 0.6)'}}onSubmit={this.handleSubmit}>
+        <h5 className="grey-text text-darken-3" style={{marginBottom: 20}}>Upload a map</h5>
+        <label htmlFor="title">What do you want to name this map?</label>
+        <input type="text" id='title' onChange={this.handleChange} /> 
+        <label htmlFor="routeInfo">Add your google map url</label>
+        <textarea
+          id='routeInfo'
+          onChange={this.handleChange} />
+        <button type='submit' className="material-icons" style={{backgroundColor: '#26C6DA'}} >motorcycle</button>
+      </form>
+     </div>
     );
   }
 }

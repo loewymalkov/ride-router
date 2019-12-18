@@ -9,7 +9,7 @@ const Header = (props) => {
   const { auth, profile } = props;
   const links = auth.uid ? <LoggedInLinks profile={ profile } /> : <LoggedOutLinks />;
   return (
-    <div className="navbar-fixed">
+    <div className="navbar-fixed ">
       <nav>
         <div className="container">
           <Link to='/' className="brand-logo">
