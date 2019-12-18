@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import RouteList from '../routes/RouteList';
-import Rating from '../routes/Rating';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
@@ -11,16 +10,11 @@ class Home extends Component {
     const { routes, auth } = this.props;
     if (!auth.uid) return <Redirect to='/signin' />;
     return (
-      <div className="dashboard container">
-        <div className="row">
-          <div className="col s12 m6">
+      <div className="home container">
+          <div className="container center">
             <RouteList routes={routes} />
           </div>
-          <div className="col s12 m5 offset-m1">
-            <Rating />
-          </div>
         </div>
-      </div>
     );
   }
 }

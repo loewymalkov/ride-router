@@ -9,13 +9,13 @@ class NewRoute extends Component {
     routeInfo:''
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({
       [event.target.id]: event.target.value
     })
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
     this.props.newRoute(this.state);
     this.props.history.push('/');
@@ -24,6 +24,7 @@ class NewRoute extends Component {
   render() {
     const { auth } = this.props;
       if (!auth.uid) return <Redirect to='/signin' />
+
     return (
       <div style={{marginTop: 50, marginLeft: 40}} className="row">
         <div className="col s12 m7">
@@ -33,16 +34,14 @@ class NewRoute extends Component {
             </div>
             <div className="card-content">
               <form onSubmit={this.handleSubmit}>
-                <input type="text" id='title' placeholder='Title' onChange={this.handleChange} /> 
+                <label htmlFor="title">What do you want to call this map?</label>
+                <input type="text" id='title' onChange={this.handleChange} /> 
+                <label htmlFor="routeInfo">Add your google map url</label>
                 <textarea
                   id='routeInfo'
-                  placeholder='Upload your map'
                   onChange={this.handleChange} />
                 <button type='submit'>upload</button>
               </form>
-            </div>
-            <div className="card-action">
-              <a href="#/routes">browse maps</a>
             </div>
           </div>
         </div>

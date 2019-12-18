@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import RouteList from './components/routes/RouteList';
+import RouteDetails from './components/routes/RouteDetails';
 import NewRoute from './components/routes/NewRoute';
 import Home from './components/home/Home';
 import Header from './components/layout/Header';
@@ -13,12 +13,12 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
+        <div>
           <Header />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/route/:id" component={RouteList} />
             <Route path="/newroute" component={NewRoute} />
+            <Route path="/route/:id" component={RouteDetails} />
             <Route path='/signin' component={LogIn} />
             <Route path='/signup' component={Register} />
             <Route path="/user" component={User} />

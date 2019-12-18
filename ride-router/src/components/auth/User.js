@@ -1,17 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
-// will need to be completely refactored into seperate folder
-
-function User() {
+const User = (props) => {
+  const { auth } = props;
+  if (!auth.uid) return <Redirect to ='/sign' />
   return(
-    <div>
+    <div className="container center">
       <ul>
-        <li>Username: Loewy </li>
+        <li>Username: {props.profile.firstName} </li>
         <li>Date of account creation: today</li>
-        <li>Route Submissions: none</li>
       </ul>
     </div>
   );
 }
 
-export default User;
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+
+export default connect(mapStateToProps)(User);
+
+
