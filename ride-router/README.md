@@ -30,7 +30,7 @@ A map app that lets users share and rate fun riding/driving routes.
 
 ## ROUTE DIAGRAM
 
-<img src="src/images/ride-router-diagram.jpeg"
+<img src="public/img/ride-router-diagram.jpeg"
      alt="Web App Diagram"
      style="margin-left: 10px;" />
 

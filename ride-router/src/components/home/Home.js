@@ -10,11 +10,9 @@ class Home extends Component {
     const { routes, auth } = this.props;
     if (!auth.uid) return <Redirect to='/signin' />;
     return (
-      <div className="home container">
-          <div className="container center">
-            <RouteList routes={routes} />
-          </div>
-        </div>
+      <div className="container center">
+        <RouteList routes={routes} />
+      </div>
     );
   }
 }

@@ -10,10 +10,7 @@ const LoggedInLinks = (props) => {
         <li><NavLink to='/newroute'><i className="material-icons" style={{marginRight: 15}}>add_circle_outline</i></NavLink></li>
         <li><NavLink to='/'><i className="material-icons" style={{marginRight: 15}}>search</i></NavLink></li>
         <li><NavLink to='/user'><i className="material-icons" style={{marginRight: 15}}>account_circle</i></NavLink></li>
-        <li><a onClick={props.signOut}><i style={{marginRight: 15}}>Log Out</i></a></li>
-        <li><NavLink to='/' className="btn btn-floating"> 
-        {props.profile.initials} 
-        </NavLink></li>
+        <li><a onClick={props.signOut}><i style={{marginRight: 15}}>LOG OUT</i></a></li>
       </ul>
     </div>
   );
