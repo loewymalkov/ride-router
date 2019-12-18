@@ -12,7 +12,7 @@ const LoggedInLinks = (props) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/'><i className="material-icons" style={{marginRight: 15}}>search</i>
+          <NavLink to='/browse'><i className="material-icons" style={{marginRight: 15}}>search</i>
           </NavLink>
         </li>
         <li>

@@ -6,6 +6,7 @@ import Header from './components/layout/Header';
 import User from './components/auth/User';
 import LogIn from './components/auth/LogIn';
 import Register from './components/auth/Register';
+import Browse from './components/home/Browse';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
@@ -17,6 +18,7 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route path='/browse' component={Browse} />
             <Route path="/newroute" component={NewRoute} />
             <Route path="/route/:id" component={RouteDetails} />
             <Route path='/signin' component={LogIn} />

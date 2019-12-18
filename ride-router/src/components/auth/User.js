@@ -9,7 +9,7 @@ const User = (props) => {
     <div className="container center">
       <ul>
         <li>Username: {props.profile.firstName} </li>
-        <li>Date of account creation: today</li>
+        <li>Date of account creation:  { Date() }</li>
       </ul>
     </div>
   );
