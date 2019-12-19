@@ -4,6 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
 import moment from 'moment';
+import mapStyles from '../../mapStyles';
 
 const RouteDetails = (props) => {
   const { route, auth } = props;
@@ -15,7 +16,15 @@ const RouteDetails = (props) => {
         <div className="card z-depth-0" style={{ background: 'rgba(255, 255, 255, 0.55)'}}>
           <div className="card-content">
             <span className="card-title">{ route.title } </span>
-            <embed src={ route.routeInfo } width="600" height="600" title="map"></embed>
+            <embed 
+            src={ route.routeInfo } 
+            width="600" 
+            height="600" 
+            title="map"
+            options={{
+              styles: mapStyles
+            }}
+            ></embed>
             <p>{route.userFirstName} {route.userLastName}</p>
             <p> {moment(route.createdAt.toDate()).calendar()}</p>
           </div>

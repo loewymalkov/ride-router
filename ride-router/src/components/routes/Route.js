@@ -1,18 +1,22 @@
 import React from 'react';
+import mapStyles from '../../mapStyles'
 
 const Route = ({route}) => {
   return (
     <div className="row">
-      <div className="col s12 m6">
+      <div className="col s12 m10">
         <div className="card" style={{ background: 'rgba(255, 255, 255, 0.55)'}}>
-          <div className="card-content white-text">
+          <div className="card-content grey-text text-darken-2">
             <p><span className="card-title">{route.title}</span></p>
             <div className="container">
             <embed 
             src={ route.routeInfo } 
-            width="200" 
-            height="250" 
+            width="75%" 
+            height="300" 
             title="map"
+            options={{
+              styles: mapStyles
+            }}
             >
             </embed>
             </div>

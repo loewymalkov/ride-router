@@ -9,7 +9,7 @@ const User = (props) => {
   return(
     <div className="container center">
       <div className="card" style={{background: 'rgba(255, 255, 255, 0.6)'}}>
-        <ul className="" >
+        <ul className="grey-text text-darken-3">
           <li>Username: {props.profile.firstName} </li>
           <li>Email: {props.auth.email} </li>
           <li>Sign up date:  {moment.unix(props.auth.createdAt / 1000).fromNow()}</li>
