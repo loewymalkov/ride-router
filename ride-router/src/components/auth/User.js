@@ -7,7 +7,7 @@ const User = (props) => {
   const { auth } = props;
   if (!auth.uid) return <Redirect to ='/sign' />
   return(
-    <div className="container center" style={{marginTop: 100}}>
+    <div className="container center" style={{marginTop: 200}}>
       <div className="card" style={{background: 'rgba(255, 255, 255, 0.6)', padding: 5}}>
         <div className="card-title grey-text text-darken-3">Account Info</div>
         <ul className="grey-text text-darken-3" style={{margin: 30}}>
