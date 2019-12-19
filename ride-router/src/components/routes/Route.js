@@ -7,7 +7,15 @@ const Route = ({route}) => {
         <div className="card" style={{ background: 'rgba(255, 255, 255, 0.55)'}}>
           <div className="card-content white-text">
             <p><span className="card-title">{route.title}</span></p>
-            <p>{route.routeInfo}</p>
+            <div className="container">
+            <embed 
+            src={ route.routeInfo } 
+            width="200" 
+            height="250" 
+            title="map"
+            >
+            </embed>
+            </div>
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>

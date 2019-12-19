@@ -8,11 +8,13 @@ const User = (props) => {
   if (!auth.uid) return <Redirect to ='/sign' />
   return(
     <div className="container center">
-      <ul>
-        <li>Username: {props.profile.firstName} </li>
-        <li>Email: {props.auth.email} </li>
-        <li>Sign up date:  {moment.unix(props.auth.createdAt / 1000).fromNow()}</li>
-      </ul>
+      <div className="card" style={{background: 'rgba(255, 255, 255, 0.6)'}}>
+        <ul>
+          <li>Username: {props.profile.firstName} </li>
+          <li>Email: {props.auth.email} </li>
+          <li>Sign up date:  {moment.unix(props.auth.createdAt / 1000).fromNow()}</li>
+        </ul>
+      </div>
     </div>
   );
 }
