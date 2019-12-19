@@ -37,14 +37,14 @@ class NewRoute extends Component {
           onChange={this.handleChange} /> 
         </div>
         <div className="input-field">
-          <label className="grey-text text-darken-2" htmlFor="routeInfo">Add your google map url</label>
+          <label className="grey-text text-darken-2"htmlFor="routeInfo">Add your google map url</label>
           <input
             type="text" 
             id='routeInfo'
             onChange={this.handleChange} />
         </div>
-        <div className="input-field">
-        <button type='submit' className="material-icons" style={{backgroundColor: '#26C6DA'}} >motorcycle</button>
+        <div className="input-field white-text">
+        <button type='submit' className=" material-icons" style={{backgroundColor: 'rgba(0, 230, 226, 0.51)', color: 'white', fontSize: 35}} >motorcycle</button>
         </div>
       </form>
      </div>
