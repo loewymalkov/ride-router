@@ -7,6 +7,7 @@ import User from './components/auth/User';
 import LogIn from './components/auth/LogIn';
 import Register from './components/auth/Register';
 import Browse from './components/home/Browse';
+import About from './components/home/About';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
@@ -17,7 +18,8 @@ class App extends Component {
         <div>
           <Header />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={About} />
+            <Route exact path="/home" component={Home} />
             <Route path='/browse' component={Browse} />
             <Route path="/newroute" component={NewRoute} />
             <Route path="/route/:id" component={RouteDetails} />

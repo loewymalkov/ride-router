@@ -11,7 +11,7 @@ const Route = ({route}) => {
             <div className="container">
             <embed 
             src={ route.routeInfo } 
-            width="75%" 
+            width="100%" 
             height="300" 
             title="map"
             options={{

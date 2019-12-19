@@ -34,7 +34,7 @@ const RouteDetails = (props) => {
   } else {
     return (
       <div className="container center">
-        <p>Patience...</p>
+        <p>Patience... </p>
       </div>
     );
   }
